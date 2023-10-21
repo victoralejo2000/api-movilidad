@@ -14,15 +14,15 @@ class Alumno(db.Model):
         return Alumno.query.all()
     
     @staticmethod
-    def get_by_id(id):
-        return Alumno.query.get(id)
+    def get_by_id(alumno_id):
+        return Alumno.query.get(alumno_id)
     
     @staticmethod
     def get_by_apellido(alumno_apellido):
         return Alumno.query.filter_by(alumno_apellido=alumno_apellido).first()
     
     def save(self):
-        if not self.id:
+        if not self.alumno_id:
             db.session.add(self)
         db.session.commit()
         
