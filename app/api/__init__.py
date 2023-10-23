@@ -4,7 +4,10 @@ api = Blueprint('api',__name__,url_prefix='/api')
 
 from .resources import (
     usuario_resources,
-    alumno_resources
+    alumno_resources,
+    colegio_resources,
+    vehiculo_resources,
+    movilidad_resources
 )
 
 # from .models.alumno_models import Alumno
